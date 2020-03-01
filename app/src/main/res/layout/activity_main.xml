@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FBC02D"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titletv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/bangers"
+        android:text="@string/Title_tv"
+        android:textSize="45sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv"
+        android:layout_width="382dp"
+        android:layout_height="194dp"
+        android:layout_marginTop="96dp"
+        app:cardElevation="7dp"
+        app:contentPadding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titletv">
+
+        <TextView
+            android:id="@+id/questv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/creepster"
+            android:text="What is the temprature in your city is it true?"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/countertv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/butcherman"
+        android:text="@string/counter"
+        app:layout_constraintBottom_toTopOf="@+id/cv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titletv"
+        app:layout_constraintVertical_bias="0.512" />
+
+    <Button
+        android:id="@+id/truebtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="56dp"
+        android:background="@color/colorAccent"
+        android:text="@string/true_button"
+        app:layout_constraintEnd_toStartOf="@+id/falsebtn"
+        app:layout_constraintTop_toBottomOf="@+id/cv" />
+
+    <Button
+        android:id="@+id/falsebtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="32dp"
+        android:background="@color/colorAccent"
+        android:text="@string/false_button"
+        app:layout_constraintEnd_toStartOf="@+id/nxtbtn"
+        app:layout_constraintTop_toBottomOf="@+id/cv" />
+
+    <ImageButton
+        android:id="@+id/prebtn"
+        android:layout_width="45dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintEnd_toStartOf="@+id/truebtn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv"
+        app:srcCompat="@android:drawable/ic_media_previous" />
+
+    <ImageButton
+        android:id="@+id/nxtbtn"
+        android:layout_width="45dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv"
+        app:srcCompat="@android:drawable/ic_media_next" />
+
+    <TextView
+        android:id="@+id/cscoretv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/itim"
+        android:text="Current Score: 0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titletv" />
+
+    <TextView
+        android:id="@+id/hscoretv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/itim"
+        android:text="High Score: 0"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toStartOf="@+id/countertv"
+        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cscoretv" />
+
+    <Button
+        android:id="@+id/sharebtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="148dp"
+        android:layout_marginEnd="152dp"
+        android:background="@color/colorAccent"
+        android:text="Share"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
